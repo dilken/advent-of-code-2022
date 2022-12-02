@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
-use utils;
+use lib;
 
 pub fn get_rock_paper_scissors_scores() {
     println!("Hello day 2!");
@@ -9,7 +9,7 @@ pub fn get_rock_paper_scissors_scores() {
 }
 
 fn print_scores() -> std::io::Result<()> {
-    let mut contents: String = utils::get_input("inputs/day02_input.txt"); 
+    let mut contents: String = lib::get_input("inputs/day02_input.txt"); 
     let part_one: u32 = contents
             .lines()
             .into_iter()

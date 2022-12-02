@@ -1,6 +1,7 @@
 mod day01;
 mod day02;
-mod utils; 
+mod lib;
+
 
 fn main() {
     day01::get_elf_carrying_most_kcal();
