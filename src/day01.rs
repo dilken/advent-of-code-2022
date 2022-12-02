@@ -38,9 +38,9 @@ fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
         }
     }
 
-    let three_sum: i32 = max_sums.iter().sum();
+    let top_sum: i32 = max_sums.iter().sum();
 
-    println!("The top {} elf(s) carrying the most is carrying: {} kcals", top_num_of_elves, three_sum);
+    println!("The top {} elf(s) carrying the most is carrying: {} kcals", top_num_of_elves, top_sum);
 
     Ok(())
 }
