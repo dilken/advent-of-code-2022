@@ -1,15 +1,11 @@
-use std::fs::File;
-use std::io::BufReader;
-use std::io::prelude::*;
 use lib;
 
 pub fn get_rock_paper_scissors_scores() {
-    println!("Hello day 2!");
-    print_scores(); 
+    print_scores().unwrap(); 
 }
 
 fn print_scores() -> std::io::Result<()> {
-    let mut contents: String = lib::get_input("inputs/day02_input.txt"); 
+    let contents = lib::get_input_file_contents("inputs/day02_input.txt"); 
     let part_one: u32 = contents
             .lines()
             .into_iter()
@@ -30,7 +26,7 @@ fn print_scores() -> std::io::Result<()> {
     println!("Your total score for part_one is: {}", part_one);
 
 
-    let mut part_two: u32 = contents
+    let part_two: u32 = contents
             .lines()
             .into_iter()
             .fold(0u32, |score, line| match line {

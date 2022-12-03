@@ -1,16 +1,12 @@
-use std::fs::File;
-use std::io::BufReader;
-use std::io::prelude::*;
 use lib; 
 
-pub fn get_elf_carrying_most_kcal(){
-    println!("Welcome to day 1!");
-    print_elf_kcals(1);
-    print_elf_kcals(3);
+pub fn print_elf_carrying_most_kcal(){
+    print_elf_kcals(1).unwrap();
+    print_elf_kcals(3).unwrap();
 }
 
 fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
-    let mut contents: String = lib::get_input("inputs/day01_input.txt"); 
+    let contents = lib::get_input_file_contents("inputs/day01_input.txt"); 
 
     let mut max_sums: Vec<i32> = Vec::new();
     let mut min_index = 0;

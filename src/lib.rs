@@ -2,11 +2,11 @@ use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
 
-pub fn get_input(input_path: &str) -> String {
-    let file = File::open(input_path).expect("Could not read input file!");;
+pub fn get_input_file_contents(input_path: &str) -> String {
+    let file = File::open(input_path).expect("Could not read input file!");
     let mut buf_reader = BufReader::new(file);
     let mut contents = String::new();
-    buf_reader.read_to_string(&mut contents);
+    buf_reader.read_to_string(&mut contents).unwrap();
 
     contents
 }

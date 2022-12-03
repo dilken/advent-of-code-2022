@@ -4,6 +4,6 @@ mod lib;
 
 
 fn main() {
-    day01::get_elf_carrying_most_kcal();
+    day01::print_elf_carrying_most_kcal();
     day02::get_rock_paper_scissors_scores();
 }
