@@ -1,11 +1,11 @@
-use lib;
+use crate::utils; 
 
 pub fn get_rock_paper_scissors_scores() {
     print_scores().unwrap(); 
 }
 
 fn print_scores() -> std::io::Result<()> {
-    let contents = lib::get_input_file_contents("inputs/day02_input.txt"); 
+    let contents = utils::get_input_file_contents("inputs/day02_input.txt"); 
     let part_one: u32 = contents
             .lines()
             .into_iter()
@@ -47,5 +47,3 @@ fn print_scores() -> std::io::Result<()> {
 
     Ok(())
 }
-
-

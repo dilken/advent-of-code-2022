@@ -1,4 +1,4 @@
-use lib; 
+use crate::utils; 
 
 pub fn print_elf_carrying_most_kcal(){
     print_elf_kcals(1).unwrap();
@@ -6,7 +6,7 @@ pub fn print_elf_carrying_most_kcal(){
 }
 
 fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
-    let contents = lib::get_input_file_contents("inputs/day01_input.txt"); 
+    let contents = utils::get_input_file_contents("inputs/day01_input.txt"); 
 
     let mut max_sums: Vec<i32> = Vec::new();
     let mut min_index = 0;
@@ -23,12 +23,12 @@ fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
 
         if v_len < top_num_of_elves {
             max_sums.push(sum);
-            min_index = lib::arg_min(max_sums.clone());
+            min_index = utils::arg_min(max_sums.clone());
             v_len += 1;
         }
         else if sum > max_sums[min_index as usize] {
             max_sums[min_index as usize] = sum;
-            min_index = lib::arg_min(max_sums.clone());
+            min_index = utils::arg_min(max_sums.clone());
         }
     }
 
@@ -38,5 +38,6 @@ fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
 
     Ok(())
 }
+
 
 
