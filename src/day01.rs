@@ -6,13 +6,13 @@ pub fn print_elf_carrying_most_kcal(){
 }
 
 fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
-    let contents = utils::get_input_file_contents("inputs/day01_input.txt"); 
+    let input = utils::get_input("inputs/day01_input.txt"); 
 
     let mut max_sums: Vec<i32> = Vec::new();
     let mut min_index = 0;
     let mut v_len = 0;
     
-    for elf in contents.split("\n\n") {
+    for elf in input.split("\n\n") {
         let mut v: Vec<i32> = Vec::new();
 
         for cals_for_elf in elf.split("\n") {

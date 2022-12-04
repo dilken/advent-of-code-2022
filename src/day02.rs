@@ -5,8 +5,8 @@ pub fn print_rock_paper_scissors_scores() {
 }
 
 fn print_scores() -> std::io::Result<()> {
-    let contents = utils::get_input_file_contents("inputs/day02_input.txt"); 
-    let part_one: u32 = contents
+    let input = utils::get_input("inputs/day02_input.txt"); 
+    let part_one: u32 = input
             .lines()
             .into_iter()
             .fold(0u32, |score, line| match line {
@@ -26,7 +26,7 @@ fn print_scores() -> std::io::Result<()> {
     println!("Your total score for part_one is: {}", part_one);
 
 
-    let part_two: u32 = contents
+    let part_two: u32 = input
             .lines()
             .into_iter()
             .fold(0u32, |score, line| match line {

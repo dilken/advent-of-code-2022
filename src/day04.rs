@@ -2,9 +2,9 @@ use crate::utils;
 use itertools::Itertools;
 
 pub fn print_elf_sections() { 
-  let contents = utils::get_input_file_contents("inputs/day04_input.txt"); 
+  let input = utils::get_input("inputs/day04_input.txt"); 
 
-  let sections = contents
+  let sections = input
       .lines()
       .filter_map(|l| {
         l.split(",")

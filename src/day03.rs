@@ -7,8 +7,8 @@ pub fn print_elf_backpack_items() {
 }
 
 fn print_backpack_items() { 
-    let contents = utils::get_input_file_contents("inputs/day03_input.txt"); 
-    let items: u32 = contents
+    let input = utils::get_input("inputs/day03_input.txt"); 
+    let items: u32 = input
         .lines()
         .map(get_compartment_items)
         .map(|(s1, s2)| {
@@ -21,9 +21,9 @@ fn print_backpack_items() {
 }
 
 fn print_backpack_badges() {
-    let contents = utils::get_input_file_contents("inputs/day03_input.txt"); 
+    let input = utils::get_input("inputs/day03_input.txt"); 
 
-    let badges_count: u32 = contents
+    let badges_count: u32 = input
         .lines()
         .tuples()
         .map(|(s1, s2, s3)| {
