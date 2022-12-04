@@ -1,6 +1,6 @@
 use crate::utils; 
 
-pub fn get_rock_paper_scissors_scores() {
+pub fn print_rock_paper_scissors_scores() {
     print_scores().unwrap(); 
 }
 
