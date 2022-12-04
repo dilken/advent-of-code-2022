@@ -23,12 +23,12 @@ fn print_elf_kcals(top_num_of_elves: i32) -> std::io::Result<()> {
 
         if v_len < top_num_of_elves {
             max_sums.push(sum);
-            min_index = utils::arg_min(max_sums.clone());
+            min_index = utils::arg_min(&max_sums);
             v_len += 1;
         }
         else if sum > max_sums[min_index as usize] {
             max_sums[min_index as usize] = sum;
-            min_index = utils::arg_min(max_sums.clone());
+            min_index = utils::arg_min(&max_sums);
         }
     }
 

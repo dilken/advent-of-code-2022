@@ -11,10 +11,10 @@ pub fn get_input_file_contents(input_path: &str) -> String {
     contents
 }
 
-pub fn arg_min(v: Vec<i32>) -> i32 {
+pub fn arg_min(v: &Vec<i32>) -> i32 {
     let mut result: i32 = 0;
     let mut index: i32 = 0;
-    let mut min = i32::MAX;
+    let mut min = &i32::MAX;
     for e in v {
         if e < min {
             min = e;
